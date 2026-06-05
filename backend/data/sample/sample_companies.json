@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Amazon",
+    "visit_date": "2024-08-15",
+    "eligibility_cgpa": 7.5,
+    "branches_allowed": ["CSE", "IT", "ECE"],
+    "rounds": "1 Online Assessment, 3 Technical Interviews, 1 Bar Raiser",
+    "package_range": "30-45 LPA",
+    "number_of_offers": 8
+  },
+  {
+    "name": "Deloitte",
+    "visit_date": "2024-09-10",
+    "eligibility_cgpa": 6.5,
+    "branches_allowed": ["ALL"],
+    "rounds": "1 Aptitude Test, 1 Group Discussion, 1 Technical Interview, 1 HR",
+    "package_range": "7.5-12 LPA",
+    "number_of_offers": 35
+  },
+  {
+    "name": "TCS",
+    "visit_date": "2024-10-05",
+    "eligibility_cgpa": 6.0,
+    "branches_allowed": ["ALL"],
+    "rounds": "1 NQT Test, 1 Technical Interview, 1 HR",
+    "package_range": "3.3-7.5 LPA",
+    "number_of_offers": 120
+  },
+  {
+    "name": "Microsoft",
+    "visit_date": "2024-08-01",
+    "eligibility_cgpa": 8.0,
+    "branches_allowed": ["CSE", "IT"],
+    "rounds": "1 Online Coding, 4 Technical Interviews",
+    "package_range": "40-50 LPA",
+    "number_of_offers": 4
+  },
+  {
+    "name": "Atlassian",
+    "visit_date": "2024-08-20",
+    "eligibility_cgpa": 7.0,
+    "branches_allowed": ["CSE", "IT", "ECE", "EE"],
+    "rounds": "1 Online Assessment, 1 System Design, 2 Technical Interviews, 1 Values Fit",
+    "package_range": "45-60 LPA",
+    "number_of_offers": 2
+  },
+  {
+    "name": "Cognizant",
+    "visit_date": "2024-10-15",
+    "eligibility_cgpa": 6.0,
+    "branches_allowed": ["ALL"],
+    "rounds": "1 Aptitude, 1 Technical, 1 HR",
+    "package_range": "4-6.5 LPA",
+    "number_of_offers": 85
+  },
+  {
+    "name": "JP Morgan",
+    "visit_date": "2024-09-05",
+    "eligibility_cgpa": 7.0,
+    "branches_allowed": ["CSE", "IT", "ECE"],
+    "rounds": "1 Online Assessment (Code for Good), 2 Technical, 1 HR",
+    "package_range": "15-20 LPA",
+    "number_of_offers": 12
+  },
+  {
+    "name": "Cisco",
+    "visit_date": "2024-08-25",
+    "eligibility_cgpa": 7.5,
+    "branches_allowed": ["CSE", "IT", "ECE", "EE"],
+    "rounds": "1 Online Test, 3 Technical Interviews, 1 HR",
+    "package_range": "18-25 LPA",
+    "number_of_offers": 6
+  },
+  {
+    "name": "Accenture",
+    "visit_date": "2024-10-20",
+    "eligibility_cgpa": 6.0,
+    "branches_allowed": ["ALL"],
+    "rounds": "1 Cognitive Test, 1 Coding Test, 1 Communication Test, 1 Interview",
+    "package_range": "4.5-8 LPA",
+    "number_of_offers": 150
+  },
+  {
+    "name": "Goldman Sachs",
+    "visit_date": "2024-08-10",
+    "eligibility_cgpa": 7.5,
+    "branches_allowed": ["CSE", "IT", "ECE"],
+    "rounds": "1 Online Aptitude & Coding, 4 Technical Interviews",
+    "package_range": "20-25 LPA",
+    "number_of_offers": 5
+  }
+]

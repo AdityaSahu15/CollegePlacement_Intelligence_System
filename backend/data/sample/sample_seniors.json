@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Rahul Sharma",
+    "batch": "2024",
+    "company": "Amazon",
+    "role": "SDE-1",
+    "rounds_detail": "Online Assessment had 2 coding questions (graphs and arrays). Technical 1 was entirely DSA focusing on Trees. Technical 2 was LLD and DSA. Bar Raiser was mostly behavioral with leadership principles.",
+    "questions_asked": "1. Reverse a linked list in groups of k. 2. Design a URL shortener.",
+    "tech_stack": "Java, Spring Boot, React",
+    "tips": "Focus heavily on Amazon Leadership Principles for the final round. Practice DP and Graphs.",
+    "linkedin_url": "https://linkedin.com/in/rahul-sharma-mock",
+    "consent": true,
+    "selected": true
+  },
+  {
+    "name": "Priya Patel",
+    "batch": "2024",
+    "company": "Deloitte",
+    "role": "Analyst",
+    "rounds_detail": "Aptitude was moderate. GD topic was 'AI vs Jobs'. Technical interview focused on SQL, DBMS concepts and my final year project.",
+    "questions_asked": "Difference between clustered and non-clustered index. Explain normalization up to 3NF.",
+    "tech_stack": "SQL, Python",
+    "tips": "Be confident in GD. Know your resume inside out.",
+    "linkedin_url": "",
+    "consent": false,
+    "selected": true
+  },
+  {
+    "name": "Amit Kumar",
+    "batch": "2024",
+    "company": "Microsoft",
+    "role": "SDE",
+    "rounds_detail": "OA had 3 questions, 2 easy 1 hard. Tech rounds focused heavily on System Design for freshers which was surprising, and advanced DSA.",
+    "questions_asked": "Design Tic-Tac-Toe. Find median in a stream of integers.",
+    "tech_stack": "C++, C#",
+    "tips": "Explain your thought process clearly before writing code.",
+    "linkedin_url": "https://linkedin.com/in/amit-kumar-mock",
+    "consent": true,
+    "selected": true
+  },
+  {
+    "name": "Neha Gupta",
+    "batch": "2024",
+    "company": "TCS",
+    "role": "Digital",
+    "rounds_detail": "NQT was standard. Technical round asked basic Java questions and OOPs concepts.",
+    "questions_asked": "What is polymorphism? Write a program for Fibonacci series using recursion.",
+    "tech_stack": "Java",
+    "tips": "Clear your basics of OOPs and DBMS.",
+    "linkedin_url": "https://linkedin.com/in/neha-gupta-mock",
+    "consent": true,
+    "selected": true
+  },
+  {
+    "name": "Vikram Singh",
+    "batch": "2024",
+    "company": "Amazon",
+    "role": "SDE-1",
+    "rounds_detail": "OA cleared but failed in Tech Round 1. Was asked a hard graph question.",
+    "questions_asked": "Word ladder problem.",
+    "tech_stack": "C++",
+    "tips": "Don't ignore graphs like I did.",
+    "linkedin_url": "",
+    "consent": false,
+    "selected": false
+  }
+]

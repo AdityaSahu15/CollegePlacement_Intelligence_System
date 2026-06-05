@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased min-h-screen overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-text-primary;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-br from-accent-primary to-accent-secondary bg-clip-text text-transparent;
+  }
+  .bg-glass {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium cursor-pointer transition-all duration-300 gap-2 font-sans;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-br from-accent-primary to-accent-secondary text-white shadow-[0_4px_15px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(139,92,246,0.4)];
+  }
+  .btn-secondary {
+    @apply bg-transparent text-text-primary border border-bg-tertiary hover:bg-bg-tertiary hover:-translate-y-0.5;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-[rgba(15,23,42,0.6)] border border-bg-tertiary rounded-lg text-text-primary font-sans transition-all duration-300 focus:outline-none focus:border-accent-primary focus:ring-4 focus:ring-accent-primary/20;
+  }
+  .card {
+    @apply bg-bg-secondary border border-bg-tertiary rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent-primary hover:shadow-2xl hover:shadow-black/50;
+  }
+  .tag {
+    @apply inline-block px-3 py-1 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-medium border border-accent-primary/20;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bg-primary;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-bg-tertiary rounded-full hover:bg-accent-primary;
+}
