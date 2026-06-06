@@ -165,7 +165,7 @@ def retrieve_and_generate(question: str, metadata_filters: dict = None):
             
     results = collection.query(
         query_embeddings=[query_embedding],
-        n_results=8,
+        n_results=5,
         where=where_clause
     )
     
