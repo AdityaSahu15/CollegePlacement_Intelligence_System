@@ -9,8 +9,7 @@ const suggestedQuestions = [
   "What is the selection process for Deloitte?"
 ];
 
-const Chat = () => {
-  const [messages, setMessages] = useState([]);
+const Chat = ({ messages, setMessages }) => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
@@ -49,7 +48,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-5xl h-[calc(100vh-6rem)] flex flex-col mt-4">
+    <div className="container mx-auto max-w-5xl h-[calc(100vh-6rem)] md:h-[calc(100vh-8rem)] flex flex-col mt-20 md:mt-24 mb-4">
       <div className="flex-1 bg-glass rounded-2xl flex flex-col overflow-hidden border border-bg-tertiary shadow-2xl">
         
         {/* Header */}
@@ -98,19 +97,6 @@ const Chat = () => {
                   'bg-bg-secondary border border-bg-tertiary rounded-tl-none'
                 }`}>
                   <div className="whitespace-pre-wrap">{msg.content}</div>
-                  
-                  {msg.sources && msg.sources.length > 0 && (
-                    <div className="mt-3 pt-3 border-t border-white/10">
-                      <p className="text-xs font-semibold text-text-secondary mb-1">Sources used:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {msg.sources.map((s, i) => (
-                          <span key={i} className="text-xs px-2 py-1 bg-black/20 rounded border border-white/5 text-accent-secondary">
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             ))

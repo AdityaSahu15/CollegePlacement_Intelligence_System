@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
-from ..models.schemas import SeniorExperienceForm
-from ..rag.chromadb_client import get_collection
-from ..rag.ingest import ingest_senior_experience
+from models.schemas import SeniorExperienceForm
+from rag.chromadb_client import get_collection
+from rag.ingest import ingest_senior_experience
 from typing import Optional
 
 router = APIRouter(prefix="/api/seniors", tags=["Seniors"])

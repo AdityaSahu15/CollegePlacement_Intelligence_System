@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models.schemas import ChatRequest, ChatResponse
-from ..rag.pipeline import retrieve_and_generate
+from models.schemas import ChatRequest, ChatResponse
+from rag.pipeline import retrieve_and_generate
 
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
 

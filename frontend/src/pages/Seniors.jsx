@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api';
-import { UserCircle, Search, Linkedin, Loader2, Filter, Quote } from 'lucide-react';
+import { UserCircle, Search, ExternalLink, Loader2, Filter, Quote } from 'lucide-react';
 
 const Seniors = () => {
   const [seniors, setSeniors] = useState([]);
@@ -120,7 +120,7 @@ const Seniors = () => {
                     rel="noopener noreferrer"
                     className="p-2 bg-[#0a66c2]/10 text-[#0a66c2] hover:bg-[#0a66c2] hover:text-white rounded-lg transition-colors"
                   >
-                    <Linkedin size={20} />
+                    <ExternalLink size={20} />
                   </a>
                 )}
               </div>

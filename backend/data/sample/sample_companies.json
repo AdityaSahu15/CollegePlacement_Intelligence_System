@@ -1,92 +1,248 @@
 [
-  {
-    "name": "Amazon",
-    "visit_date": "2024-08-15",
-    "eligibility_cgpa": 7.5,
-    "branches_allowed": ["CSE", "IT", "ECE"],
-    "rounds": "1 Online Assessment, 3 Technical Interviews, 1 Bar Raiser",
-    "package_range": "30-45 LPA",
-    "number_of_offers": 8
-  },
-  {
-    "name": "Deloitte",
-    "visit_date": "2024-09-10",
-    "eligibility_cgpa": 6.5,
-    "branches_allowed": ["ALL"],
-    "rounds": "1 Aptitude Test, 1 Group Discussion, 1 Technical Interview, 1 HR",
-    "package_range": "7.5-12 LPA",
-    "number_of_offers": 35
-  },
-  {
-    "name": "TCS",
-    "visit_date": "2024-10-05",
-    "eligibility_cgpa": 6.0,
-    "branches_allowed": ["ALL"],
-    "rounds": "1 NQT Test, 1 Technical Interview, 1 HR",
-    "package_range": "3.3-7.5 LPA",
-    "number_of_offers": 120
-  },
-  {
-    "name": "Microsoft",
-    "visit_date": "2024-08-01",
-    "eligibility_cgpa": 8.0,
-    "branches_allowed": ["CSE", "IT"],
-    "rounds": "1 Online Coding, 4 Technical Interviews",
-    "package_range": "40-50 LPA",
-    "number_of_offers": 4
-  },
-  {
-    "name": "Atlassian",
-    "visit_date": "2024-08-20",
-    "eligibility_cgpa": 7.0,
-    "branches_allowed": ["CSE", "IT", "ECE", "EE"],
-    "rounds": "1 Online Assessment, 1 System Design, 2 Technical Interviews, 1 Values Fit",
-    "package_range": "45-60 LPA",
-    "number_of_offers": 2
-  },
-  {
-    "name": "Cognizant",
-    "visit_date": "2024-10-15",
-    "eligibility_cgpa": 6.0,
-    "branches_allowed": ["ALL"],
-    "rounds": "1 Aptitude, 1 Technical, 1 HR",
-    "package_range": "4-6.5 LPA",
-    "number_of_offers": 85
-  },
-  {
-    "name": "JP Morgan",
-    "visit_date": "2024-09-05",
-    "eligibility_cgpa": 7.0,
-    "branches_allowed": ["CSE", "IT", "ECE"],
-    "rounds": "1 Online Assessment (Code for Good), 2 Technical, 1 HR",
-    "package_range": "15-20 LPA",
-    "number_of_offers": 12
-  },
-  {
-    "name": "Cisco",
-    "visit_date": "2024-08-25",
-    "eligibility_cgpa": 7.5,
-    "branches_allowed": ["CSE", "IT", "ECE", "EE"],
-    "rounds": "1 Online Test, 3 Technical Interviews, 1 HR",
-    "package_range": "18-25 LPA",
-    "number_of_offers": 6
-  },
-  {
-    "name": "Accenture",
-    "visit_date": "2024-10-20",
-    "eligibility_cgpa": 6.0,
-    "branches_allowed": ["ALL"],
-    "rounds": "1 Cognitive Test, 1 Coding Test, 1 Communication Test, 1 Interview",
-    "package_range": "4.5-8 LPA",
-    "number_of_offers": 150
-  },
-  {
-    "name": "Goldman Sachs",
-    "visit_date": "2024-08-10",
-    "eligibility_cgpa": 7.5,
-    "branches_allowed": ["CSE", "IT", "ECE"],
-    "rounds": "1 Online Aptitude & Coding, 4 Technical Interviews",
-    "package_range": "20-25 LPA",
-    "number_of_offers": 5
-  }
+    {
+        "name": "Amazon",
+        "eligibility_cgpa": 7.5,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 Bar Raiser",
+        "package_range": "30-45 LPA",
+        "number_of_offers": 12,
+        "visit_date": "2025-09-28"
+    },
+    {
+        "name": "Microsoft",
+        "eligibility_cgpa": 8.0,
+        "branches_allowed": [
+            "CSE",
+            "IT"
+        ],
+        "rounds": "1 OA, 3 Tech, 1 HR",
+        "package_range": "40-50 LPA",
+        "number_of_offers": 8,
+        "visit_date": "2023-11-11"
+    },
+    {
+        "name": "Google",
+        "eligibility_cgpa": 8.5,
+        "branches_allowed": [
+            "CSE"
+        ],
+        "rounds": "1 Phone, 4 Tech, 1 Googlyness",
+        "package_range": "50-65 LPA",
+        "number_of_offers": 5,
+        "visit_date": "2024-10-07"
+    },
+    {
+        "name": "Deloitte",
+        "eligibility_cgpa": 6.5,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE",
+            "EEE"
+        ],
+        "rounds": "1 Aptitude, 1 Group Discussion, 1 Tech+HR",
+        "package_range": "7-9 LPA",
+        "number_of_offers": 45,
+        "visit_date": "2023-11-10"
+    },
+    {
+        "name": "TCS",
+        "eligibility_cgpa": 6.0,
+        "branches_allowed": [
+            "All Branches"
+        ],
+        "rounds": "1 NQT, 1 Tech, 1 HR",
+        "package_range": "3.3-7 LPA",
+        "number_of_offers": 150,
+        "visit_date": "2024-11-24"
+    },
+    {
+        "name": "Infosys",
+        "eligibility_cgpa": 6.0,
+        "branches_allowed": [
+            "All Branches"
+        ],
+        "rounds": "1 Aptitude, 1 Tech, 1 HR",
+        "package_range": "3.6-8 LPA",
+        "number_of_offers": 120,
+        "visit_date": "2023-10-20"
+    },
+    {
+        "name": "Wipro",
+        "eligibility_cgpa": 6.0,
+        "branches_allowed": [
+            "All Branches"
+        ],
+        "rounds": "1 Aptitude+Coding, 1 Tech+HR",
+        "package_range": "3.5-6.5 LPA",
+        "number_of_offers": 100,
+        "visit_date": "2023-11-23"
+    },
+    {
+        "name": "Cisco",
+        "eligibility_cgpa": 7.0,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 Managerial",
+        "package_range": "15-20 LPA",
+        "number_of_offers": 15,
+        "visit_date": "2024-08-10"
+    },
+    {
+        "name": "Goldman Sachs",
+        "eligibility_cgpa": 7.5,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE",
+            "EEE"
+        ],
+        "rounds": "1 Aptitude+Coding, 2 Tech, 1 HR",
+        "package_range": "20-25 LPA",
+        "number_of_offers": 10,
+        "visit_date": "2025-11-04"
+    },
+    {
+        "name": "Atlassian",
+        "eligibility_cgpa": 7.5,
+        "branches_allowed": [
+            "CSE",
+            "IT"
+        ],
+        "rounds": "1 OA, 1 Machine Coding, 2 Tech, 1 Values",
+        "package_range": "45-60 LPA",
+        "number_of_offers": 4,
+        "visit_date": "2025-09-11"
+    },
+    {
+        "name": "Adobe",
+        "eligibility_cgpa": 7.5,
+        "branches_allowed": [
+            "CSE",
+            "IT"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 Director",
+        "package_range": "35-42 LPA",
+        "number_of_offers": 7,
+        "visit_date": "2024-11-16"
+    },
+    {
+        "name": "Flipkart",
+        "eligibility_cgpa": 7.0,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 Hiring Manager",
+        "package_range": "28-32 LPA",
+        "number_of_offers": 14,
+        "visit_date": "2025-10-11"
+    },
+    {
+        "name": "Paytm",
+        "eligibility_cgpa": 6.5,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 HR",
+        "package_range": "12-16 LPA",
+        "number_of_offers": 25,
+        "visit_date": "2023-10-06"
+    },
+    {
+        "name": "Zomato",
+        "eligibility_cgpa": 7.0,
+        "branches_allowed": [
+            "CSE",
+            "IT"
+        ],
+        "rounds": "1 OA, 2 Tech, 1 Founder",
+        "package_range": "25-30 LPA",
+        "number_of_offers": 8,
+        "visit_date": "2023-08-02"
+    },
+    {
+        "name": "Uber",
+        "eligibility_cgpa": 8.0,
+        "branches_allowed": [
+            "CSE"
+        ],
+        "rounds": "1 OA, 1 Machine Coding, 2 Tech",
+        "package_range": "40-55 LPA",
+        "number_of_offers": 3,
+        "visit_date": "2023-08-28"
+    },
+    {
+        "name": "Salesforce",
+        "eligibility_cgpa": 7.5,
+        "branches_allowed": [
+            "CSE",
+            "IT"
+        ],
+        "rounds": "1 HackerRank OA, 2 Tech, 1 HR",
+        "package_range": "28-34 LPA",
+        "number_of_offers": 9,
+        "visit_date": "2025-11-02"
+    },
+    {
+        "name": "Oracle",
+        "eligibility_cgpa": 7.0,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 OA, 3 Tech",
+        "package_range": "18-24 LPA",
+        "number_of_offers": 18,
+        "visit_date": "2025-09-12"
+    },
+    {
+        "name": "IBM",
+        "eligibility_cgpa": 6.5,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE",
+            "EEE"
+        ],
+        "rounds": "1 Cognitive Ability, 1 Coding, 1 Tech+HR",
+        "package_range": "8-12 LPA",
+        "number_of_offers": 35,
+        "visit_date": "2023-11-04"
+    },
+    {
+        "name": "Samsung",
+        "eligibility_cgpa": 7.0,
+        "branches_allowed": [
+            "CSE",
+            "IT",
+            "ECE"
+        ],
+        "rounds": "1 Global Coding Test, 2 Tech, 1 HR",
+        "package_range": "14-22 LPA",
+        "number_of_offers": 20,
+        "visit_date": "2023-11-24"
+    },
+    {
+        "name": "Accenture",
+        "eligibility_cgpa": 6.0,
+        "branches_allowed": [
+            "All Branches"
+        ],
+        "rounds": "1 Cognitive+Technical, 1 Coding, 1 Communication, 1 Interview",
+        "package_range": "4.5-12 LPA",
+        "number_of_offers": 85,
+        "visit_date": "2024-11-23"
+    }
 ]

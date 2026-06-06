@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 import os
 import shutil
-from ..rag.chromadb_client import get_collection
-from ..rag.ingest import ingest_pdf
-from ..models.schemas import StatsResponse
+from rag.chromadb_client import get_collection
+from rag.ingest import ingest_pdf
+from models.schemas import StatsResponse
 from dotenv import load_dotenv
 
 load_dotenv()

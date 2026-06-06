@@ -4,8 +4,8 @@ import os
 import httpx
 from dotenv import load_dotenv
 
-from .routes import chat, companies, seniors, admin
-from .rag.ingest import load_sample_data_if_empty
+from routes import chat, companies, seniors, admin
+from rag.ingest import load_sample_data_if_empty
 
 load_dotenv()
 
@@ -37,7 +37,13 @@ async def startup_event():
         # Note: We won't crash the server so admin can still hit it, but it's noted.
 
     # Auto-ingest sample data if ChromaDB is empty
+    from rag.ingest import (
+        load_sample_data_if_empty, 
+        clear_and_reingest_seniors
+    )
+
     load_sample_data_if_empty()
+    clear_and_reingest_seniors()
     print("Startup complete. System ready.")
 
 @app.get("/health")

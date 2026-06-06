@@ -8,6 +8,12 @@ As a student navigating the placement season, I realized that generic internet a
 
 ## How to Run It
 
+> [!IMPORTANT]
+> **For Evaluators:** The backend of this application requires a GPU to run the local Qwen3-8B LLM. To conserve JarvisLabs credits, the live backend instance may be paused. 
+> 
+> **To test the live deployed version:** Please email me at `[INSERT_YOUR_EMAIL_HERE]` and I will spin up the GPU instance immediately!
+> Alternatively, you can run it locally on your own machine following the steps below.
+
 ### Prerequisites
 - Python 3.9+
 - Node.js 18+

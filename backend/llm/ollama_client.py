@@ -1,17 +1,17 @@
 import os
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 from dotenv import load_dotenv
 
 load_dotenv()
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-MODEL_NAME = "qwen3:8b" # As requested by architecture decisions
+MODEL_NAME = os.getenv("OLLAMA_MODEL", "qwen3:8b")  # Override with OLLAMA_MODEL env var for local testing
 
 # Initialize Ollama LLM
-llm = Ollama(
+llm = OllamaLLM(
     base_url=OLLAMA_BASE_URL,
     model=MODEL_NAME,
-    temperature=0.2  # Low temp for grounded answers
+    temperature=0.2
 )
 
 def get_llm():

@@ -48,7 +48,7 @@ const Contribute = () => {
 
   if (status === 'success') {
     return (
-      <div className="container py-20 flex justify-center">
+      <div className="container pt-24 pb-20 md:pt-32 flex justify-center">
         <div className="card max-w-lg w-full text-center py-16 animate-fade-in">
           <div className="w-20 h-20 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 size={40} className="text-success" />
@@ -66,7 +66,7 @@ const Contribute = () => {
   }
 
   return (
-    <div className="container py-8 max-w-4xl mx-auto">
+    <div className="container pt-24 pb-8 md:pt-32 max-w-4xl mx-auto">
       <div className="mb-8 text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-primary/20 text-accent-primary rounded-full mb-4">
           <FileEdit size={32} />

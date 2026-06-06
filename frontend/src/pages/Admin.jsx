@@ -69,7 +69,7 @@ const Admin = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="container py-20 flex justify-center">
+      <div className="container mx-auto min-h-[calc(100vh-6rem)] flex items-center justify-center">
         <div className="card max-w-md w-full text-center py-12 animate-fade-in">
           <div className="w-16 h-16 bg-danger/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <ShieldAlert size={32} className="text-danger" />
@@ -96,7 +96,7 @@ const Admin = () => {
   }
 
   return (
-    <div className="container py-8 max-w-5xl mx-auto">
+    <div className="container pt-24 pb-8 md:pt-32 max-w-5xl mx-auto">
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="text-4xl mb-2 text-gradient inline-block">Admin Dashboard</h1>

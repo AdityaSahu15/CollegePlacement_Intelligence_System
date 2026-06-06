@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from ..rag.chromadb_client import get_collection
+from rag.chromadb_client import get_collection
 import json
 
 router = APIRouter(prefix="/api/companies", tags=["Companies"])

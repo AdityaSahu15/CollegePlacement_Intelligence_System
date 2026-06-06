@@ -1,5 +1,5 @@
 // Basic fetch wrapper for API calls
-const API_BASE_URL = 'http://localhost:8000/api'; // Update to backend URL if different
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
 
 export const api = {
   chat: async (question, college = null) => {
