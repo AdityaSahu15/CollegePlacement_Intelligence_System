@@ -3,6 +3,7 @@
 
 A RAG-based web application using langchain that serves as a private placement preparation assistant for college students. It uses local placement cell data and senior experiences to answer any placement-related questions. 
 
+![Chat Page](Screenshots/chatPage.png)
 ## Why I Built This
 As a student navigating the placement season, I realized that generic internet advice doesn't apply to specific campus drives. Every college has its own patterns, eligibility criteria, and past trends. Apart from this I also felt the information gap where I had to constantly ask my seniors for all the small/irrelevant things too. I built this tool to centralize all that scattered data (PDFs regarding placement stats/policies and senior feedbacks) into one intelligent, queryable assistant so everyone in the college has the right access to the most crucial information just a query away!.
 
