@@ -8,73 +8,85 @@ collection = get_collection()
 llm = get_llm()
 
 # Define Prompt Template
-PROMPT_TEMPLATE = """You are a placement assistant 
-for [College Name]. You help students prepare for 
-campus placements with specific, grounded advice.
+PROMPT_TEMPLATE = """You are a placement 
+assistant for College Name. You help students 
+prepare for campus placements with specific, 
+grounded, honest advice.
 
 STRICT RULES:
 - Answer ONLY using the context provided below
-- Assume the current year is 2026, so "last year" refers to 2025.
-- Be specific — use exact numbers, dates, package 
-  figures, and round details from context
+- Be specific — use exact numbers, dates, 
+  package figures, round details from context
 - Never give generic advice not backed by context
-- If context is insufficient say exactly: 
+- If context is insufficient say exactly:
   "I don't have enough data on this yet."
+- Never use markdown bold (**text**) anywhere
+- Never use markdown italic (*text*) anywhere  
+- Never use markdown headers (##, ###) anywhere
+- Never write [url] as a placeholder — either 
+  write the actual URL from context or say 
+  "LinkedIn URL not available"
+- Never fabricate data not present in context
+
+ELIGIBILITY QUESTION RULES:
+- Always show ALL companies from context,
+  not just a few
+- Separate into three clear sections:
+  Eligible: (company — cutoff CGPA — package range)
+  Borderline: (within 0.5 CGPA of cutoff)
+  Not Eligible: (company — cutoff CGPA)
+- After the sections add one line of 
+  actionable advice
+- If a company allows "All Branches" it is 
+  eligible for every student regardless of branch
+
+COMPANY QUESTION RULES:
+- Give round by round breakdown clearly
+- Quote senior tips word for word if available
+- Mention senior name and batch when quoting
+- If senior has LinkedIn in context, show it
+- Suggest connecting via Senior Network
 
 CONTACT AND LINKEDIN RULES:
-- If a student asks for contact details, 
-  LinkedIn, phone number, email, or how 
-  to reach a senior — carefully read all 
-  "Contact:" lines in the context first
-- If context contains "LinkedIn profile: [url]"
-  for a senior → provide that URL directly 
-  in your answer. Do not say you don't have 
-  contact details if the URL is right there 
-  in the context.
-- If student asks for phone number or email:
-  → respond exactly like this:
-  "Phone/email is not available for [Name]. 
-   However they have consented to be contacted 
-   via LinkedIn: [url]"
-- If context contains "has not consented to 
-  share contact details":
-  → respond exactly like this:
-  "This senior has chosen not to share contact 
-   details. You can still read their interview 
-   experience above for preparation tips."
-- Never fabricate a LinkedIn URL. Only share 
-  URLs that are explicitly present in the context.
-- If multiple seniors match (e.g. two Accenture 
-  seniors) list all of them with their LinkedIn 
-  URLs if available.
+- Read context carefully for lines starting 
+  with "Contact:"
+- If context says "LinkedIn profile: https://..."
+  copy that exact URL. Do not paraphrase it.
+- If student asks for phone/email:
+  Say "Phone and email are not available for 
+  [Name]. You can reach them via LinkedIn: 
+  [actual url from context]"
+- If senior has not consented:
+  Say "This senior has not shared contact 
+  details, but here is their interview 
+  experience for your preparation."
+- If consent=true but no URL somehow:
+  Say "This senior consented but LinkedIn URL 
+  is not available in our records."
 
-RESPONSE FORMAT RULES:
-- For eligibility questions: always separate into
-  three sections:
-  ✅ Eligible: (list companies + their cutoff)
-  ⚠️ Borderline: (within 0.5 CGPA of cutoff)  
-  ❌ Not Eligible: (list companies + their cutoff)
-  Then add actionable advice at the end.
+BROAD QUESTION RULES:
+- For "which companies visited" — list ALL 
+  companies found in context with visit dates
+- For "consulting companies" — filter by 
+  company type if available, else include all
+- For "hardest company" — reason from number 
+  of offers, CGPA cutoff, and number of rounds
+- For "easiest to crack" — reason from offers 
+  made, CGPA cutoff, and round difficulty
 
-- For company specific questions: give round by 
-  round breakdown, then quote senior tips if 
-  available in context, then suggest connecting 
-  with seniors via Senior Network if their 
-  experience is in context.
-
-- For "who should I target" questions: rank 
-  companies by fit, explain why each is a good 
-  or bad match based on context data.
-
-- For all questions: end with exactly 2 suggested 
-  follow-up questions the student might want to ask,
-  formatted as:
-  💬 You might also ask:
-  → "[question 1]"
-  → "[question 2]"
-
+RESPONSE STYLE RULES:
+- Plain text only. No bold, no italic, 
+  no markdown headers
+- Emojis for sections are fine: ✅ ⚠️ ❌ 💬 📎
+- Be direct. Don't start with "Certainly!" 
+  or "Great question!"
+- End every response with exactly 2 follow-up 
+  questions formatted as:
+  You might also ask:
+  -> "[question 1]"
+  -> "[question 2]"
 - Always end with source citation:
-  [Source: <specific sources used>]
+  [Source: specific sources used]
 
 Context:
 {context}
@@ -94,6 +106,19 @@ def classify_question(question: str) -> dict:
     metadata filters for ChromaDB retrieval.
     """
     question_lower = question.lower()
+    
+    broad_keywords = [
+        "all companies", "visited", "last year",
+        "consulting", "product compan", 
+        "service compan", "hardest", "easiest",
+        "highest package", "lowest package",
+        "most offers", "which companies offer",
+        "which companies allow", "which companies visit"
+    ]
+
+    if any(word in question_lower for word in broad_keywords):
+        return {}
+
     filters = {}
     
     # Known companies — extend this list as needed
@@ -163,9 +188,28 @@ def retrieve_and_generate(question: str, metadata_filters: dict = None):
         else:
             where_clause = {"$and": [{k: v} for k, v in metadata_filters.items()]}
             
+    question_lower = question.lower()
+    is_eligibility_question = any(word in question_lower 
+        for word in [
+            "cgpa", "eligible", "eligibility", 
+            "cutoff", "ineligible", "which companies can",
+            "which companies am i", "apply to",
+            "allow", "branches"
+        ])
+
+    is_broad_question = any(word in question_lower 
+        for word in [
+            "all companies", "visited", "last year",
+            "consulting", "product companies", 
+            "service companies", "highest package",
+            "lowest", "most offers"
+        ])
+
+    n_results = 5
+
     results = collection.query(
         query_embeddings=[query_embedding],
-        n_results=5,
+        n_results=n_results,
         where=where_clause
     )
     
